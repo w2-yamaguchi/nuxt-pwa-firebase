@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
+    "deploy": "cd ../ && rm -rf public/* && cp -R functions/nuxt/dist/ public/assets && cp -R src/static/* public && firebase deploy",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
@@ -15,9 +16,13 @@
   "dependencies": {
     "ajv": "^6.0.0",
     "babel-plugin-module-resolver": "^2.7.1",
-    "babel-preset-stage-0": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "material-design-lite": "^1.3.0",
+    "node-sass": "^4.8.3",
     "nuxt": "1.0.0-rc11",
+    "sass-loader": "^6.0.7",
+    "typicons.font": "^2.0.9",
     "vue": "2.4.4",
     "vuex": "^3.0.1"
   },
